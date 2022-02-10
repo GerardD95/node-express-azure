@@ -11,8 +11,8 @@ const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 // app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-app.engine('.hbs', exphbs.engine({ extname: '.hbs', defaultLayout: "main"}));
-app.set('view engine', '.hbs');
+app.engine('handlebars', exphbs.engine({ extname: '.hbs', defaultLayout: "main"}));
+app.set('view engine', 'handlebars');
 app.set('port', config.port);
 
 app.use('/', express.static('public'))
